@@ -87,11 +87,12 @@ SELECT customer_id, MAX(order_date) AS last_order_date
 FROM orders
 GROUP BY customer_id;
 
--- Query 17: products never sold
-SELECT p.product_name
-FROM products p
-LEFT JOIN order_items oi ON p.product_id = oi.product_id
-WHERE oi.product_id IS NULL;
+-- Query 17: customers with no orders
+SELECT c.customer_id
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+WHERE o.order_id IS NULL;
+
 
 -- Query 18: high value orders
 SELECT o.order_id,
