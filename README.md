@@ -72,7 +72,6 @@ Key Learnings
 Tools Used
 
 PostgreSQL
-SQL
 
 ---
 
