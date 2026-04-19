@@ -68,13 +68,14 @@ GROUP BY customer_id
 HAVING COUNT(*) > 1;
 
 -- Query 14: monthly revenue trend
-SELECT TO_CHAR(o.order_date, 'YYYY-MM') AS month,
+SELECT TO_CHAR(o.order_date, 'YYYY-MON') AS month,
        SUM(p.price * oi.quantity) AS revenue
 FROM orders o
 JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
-GROUP BY TO_CHAR(o.order_date, 'YYYY-MM')
+GROUP BY TO_CHAR(o.order_date, 'YYYY-MON')
 ORDER BY month;
+
 
 -- Query 15: first order per customer
 SELECT customer_id, MIN(order_date) AS first_order_date
