@@ -1,2 +1,21 @@
-# ecommerce-postgres-analysis
-E-commerce data analysis project using PostgreSQL, focusing on sales trends, customer behavior, and business insights using SQL (20 analytical queries).
+# E-Commerce Sales Analysis (PostgreSQL)
+
+## Project Overview
+This project analyzes e-commerce data using PostgreSQL.
+
+## Tables
+- customers
+- products
+- orders
+- order_items
+- payments
+
+## Key Analysis
+- Revenue analysis
+- Customer behavior
+- Product performance
+- Payment trends
+
+## Tools Used
+- PostgreSQL
+- SQL
