@@ -1,86 +1,108 @@
-E-Commerce Sales Analysis (PostgreSQL)
+# E-Commerce Sales Analytics – SQL Project
 
-Project Overview
-This project is an e-commerce sales analysis system built using PostgreSQL. It simulates a real-world online shopping platform and focuses on analyzing sales performance, customer behavior, product trends, and payment patterns using SQL.
+## Project Overview
+This project demonstrates end-to-end SQL-based analysis of an e-commerce dataset.  
+The objective is to extract actionable business insights from transactional data using structured SQL queries.
 
-The main objective is to convert raw transactional data into meaningful business insights.
-
----
-
-Database Design
-
-The project consists of five relational tables:
-
-* customers: stores customer details such as name, city, and signup information
-* products: contains product details including category and price
-* orders: stores order-level information such as customer_id, order_date, and status
-* order_items: contains product-level breakdown of each order with quantity and price
-* payments: stores payment method and payment status details
+The analysis covers customer behavior, product performance, revenue trends, and payment analytics to support data-driven decision making.
 
 ---
 
-Key Analysis Performed
+## Data Model Overview
 
-Revenue Analysis
+The database consists of the following relational tables:
 
-* Calculated total revenue and category-wise revenue
-* Identified top-performing product categories
-
-Customer Analysis
-
-* Identified high-value customers based on total spending
-* Analyzed customer order frequency and behavior
-
-Product Performance
-
-* Found best-selling products based on quantity and revenue
-* Compared performance across different product categories
-
-Payment Analysis
-
-* Analyzed distribution of payment methods (UPI, Card, COD)
-* Studied payment success, failure, and pending trends
-
-Order Analysis
-
-* Order status distribution (completed, pending, cancelled)
-* Monthly order trends
+- **customers** – Customer profile information
+- **products** – Product catalog with category and pricing
+- **orders** – Order-level transactional data
+- **order_items** – Line-item details for each order
+- **payments** – Payment method and transaction status
 
 ---
 
-SQL Concepts Used
+## Key Analytical Areas
 
-* Basic SQL: SELECT, WHERE, ORDER BY, GROUP BY
-* Joins: INNER JOIN across multiple tables
-* Aggregate functions: SUM, COUNT, AVG
-* Conditional logic: CASE WHEN
-* Subqueries and CTE (WITH clause)
-* Window functions: RANK, DENSE_RANK, LAG
-
----
-
-Key Learnings
-
-* Built a complete relational database system for e-commerce
-* Learned structured data analysis using SQL
-* Applied business logic to raw transactional data
-* Used advanced SQL functions for deeper insights
-* Improved ability to translate data into business decisions
+### 1. Customer Analytics
+- Total customers in the system
+- Repeat customer identification
+- First and last purchase tracking
+- Customers with no purchase activity
 
 ---
 
-Tools Used
-
-PostgreSQL
-
----
-
-Project Outcome
-
-* Created a structured e-commerce analytics system
-* Performed end-to-end data analysis using SQL
-* Derived actionable business insights from raw data
-* Strengthened SQL and analytical thinking skills
+### 2. Product Performance Analysis
+- Total products available in catalog
+- Best-selling products based on quantity sold
+- Top-performing product per category
+- Category-level sales distribution
 
 ---
 
+### 3. Revenue Analytics
+- Total revenue generated
+- Category-wise revenue contribution
+- City-wise revenue performance
+- High-value orders identification
+
+---
+
+### 4. Order Analytics
+- Total orders placed in the system
+- Order status distribution (Completed, Pending, Cancelled, etc.)
+- Monthly revenue trend analysis
+- Average order value calculation
+
+---
+
+### 5. Payment Analytics
+- Payment method usage distribution
+- Payment status breakdown (Success / Failed / Pending)
+
+---
+
+### 6. Advanced Analytics
+- Running total revenue using window functions
+- Product ranking within categories
+- Time-based revenue trend analysis
+- Contribution analysis of products/categories
+
+---
+
+## SQL Concepts Applied
+
+This project demonstrates practical usage of:
+
+- Aggregate Functions: `SUM()`, `COUNT()`, `AVG()`
+- Joins: INNER JOIN, LEFT JOIN
+- Grouping & Filtering: `GROUP BY`, `HAVING`
+- Subqueries & Derived Tables
+- Common Table Expressions (CTEs)
+- Window Functions:
+  - `RANK()`
+  - `SUM() OVER()`
+- Date & Time Functions
+
+---
+
+## Business Insights Derived
+
+- Identification of top-performing products and categories
+- Revenue contribution analysis across segments
+- Customer purchasing behavior patterns
+- Monthly sales performance trends
+- High-value customer segmentation
+- Operational insights from order status distribution
+
+---
+
+## Project Objective
+
+To simulate real-world business intelligence reporting using SQL by transforming raw transactional data into structured insights for decision-making.
+
+---
+
+## Tools & Environment
+
+- PostgreSQL / SQL
+- Relational Database Design
+- Analytical Query Development
